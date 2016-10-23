@@ -7,11 +7,13 @@
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	<body>
+		<center>Google Authentication here.</center>
 		<div ng-controller="myCtrl">
 			<div class="g-signin2" data-onsuccess="onSignIn"></div>
 		</div>
 		<script>
 			function onSignIn(googleUser) {
+<<<<<<< HEAD
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   console.log('Name: ' + profile.getName());
@@ -19,6 +21,14 @@
   console.log('Email: ' + profile.getEmail());
 				console.log('Email: ' + profile.getPassword());
 }
+=======
+				  var profile = googleUser.getBasicProfile();
+				  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+				  console.log('Name: ' + profile.getName());
+				  console.log('Image URL: ' + profile.getImageUrl());
+				  console.log('Email: ' + profile.getEmail());
+				}
+>>>>>>> e66c34bae094a07f5b238709af7b8b909f34c537
 		</script>
 	</body>
 </html>
