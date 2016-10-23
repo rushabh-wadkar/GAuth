@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="google-signin-client_id" content="296086990970-epuscd7p36r94mctp4mnd2k9tsl6da1q.apps.googleusercontent.com">
+		<title>GAuth</title>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+	</head>
+	<body>
+		<div ng-controller="myCtrl">
+			<div class="g-signin2" data-onsuccess="onSignIn"></div>
+		</div>
+		<script>
+			function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+		</script>
+	</body>
+</html>
